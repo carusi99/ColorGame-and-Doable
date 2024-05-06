@@ -1,11 +1,27 @@
-# React Handling
-El plan consiste en la implementación de un proyecto de React que incluye los componentes principales Home, ColorGame y Doable. se pondrá en práctica gran parte de los conceptos revisados en React.
 
-## Componente: App
-La pagina de inicio tiene los estilos y el encabezado completo, además la lógica para renderizar condicionalmente los componentes Home, ColorGame y Doable.
+## ¡Juego Interactivo y App de notas con React!
 
-## Componente: Home
-El componente Home es una página principal que muestra un título, nombre de usuario y dos botones de navegación. Utiliza CSS modules para estilos. Renderiza una imagen de ícono de React, un título, nombre de usuario y dos botones. Cada botón tiene un texto y está asociado a una función de navegación específica al hacer clic.
+<img src="https://github.com/carusi99/ColorGame-and-Doable/assets/151582174/12f74525-cfae-45ba-a125-842a9f8dee9b" width="800">
+
+# Color Game y Doable
+
+El plan consiste en la implementación de un proyecto de React que incluye los componentes principales Home, ColorGame y Doable. se pondrá en práctica gran parte de los conceptos revisados en React
+## Características Principales
+### Color Game:
+`Color Game` es un juego interactivo desarrollado en React donde los jugadores intentan adivinar el color correspondiente a un código RGB mostrado. Ofrece opciones para ajustar el número de colores y proporciona una cuadrícula de botones para que los jugadores seleccionen su respuesta.
+
+
+### Doable:
+`Doable` es una aplicación de gestión de tareas desarrollada en React. Permite a los usuarios crear, organizar y completar tareas, proporcionando una interfaz intuitiva y fácil de usar. Dependiendo del estado de autenticación del usuario, la aplicación muestra diferentes vistas: una vista autenticada, y otra no autenticada.
+
+## Componentes Principales
+
+| Componente             | Detalles                                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| Home: | El componente Home muestra un título, nombre de usuario y botones de navegación. .|
+| App: | App maneja la estructura general y la navegación condicional entre Home, ColorGame y Doable basada en la ruta..|
+| ColorGame: | Aquí podemos ver el juego interactivo que desafía al usuario a adivinar colores RGB. |
+| Doable : | Página que muestra información sobre una funcionalidad llamada "Doable", con contenido diferente según la autenticación del usuario.. |
 
 ### Renderizado condicional
 la variable de estado page para decidir que componente renderizar según la siguiente tabla:
@@ -21,22 +37,57 @@ la variable de estado page para decidir que componente renderizar según la sigu
   
 El evento onClick de los botones del header así como el de los botones del componente Home están completos, al igual las funciones para que disparen cambios en el valor de la variable de estado page. La variable de estado debe permanecer en el componente App, ¿cómo podemos permitir al hijo Home que también pueda actualizar la variable de estado page?
 
-## El componente: ColorGame
-Es un juego interactivo desarrollado en React que desafía al usuario a adivinar el color correspondiente a un código RGB mostrado. Aquí hay un resumen del componente:
 
-- Este componente utiliza estados para gestionar el número de colores, los colores aleatorios generados, los intentos del jugador, el índice del color objetivo y el estado del color ganador.
-- Permite al usuario ajustar el número de colores entre 3, 6 y 9 a través de un campo de entrada.
-- Muestra un título y una descripción para el juego.
-- Presenta los componentes RGB del color objetivo que el jugador debe adivinar.
-- Ofrece un panel de control que muestra el estado actual del juego, como "Ganaste", "Perdiste" o "Intenta de nuevo".
-- Proporciona un botón de reinicio para comenzar un nuevo juego.
-- Muestra una cuadrícula de botones que representan los colores disponibles para que el usuario haga clic y adivine.
-- Los colores de los botones cambian dependiendo del estado del juego.
-- Controla los eventos de clic en los botones para registrar los intentos del usuario y determinar si ha ganado.
-- El diseño y los estilos están definidos mediante CSS modules para una apariencia visualmente agradable y coherente.
+## instalación
 
-## Componente: Doable
-Este componente es una página que muestra un título y una descripción sobre la funcionalidad del sistema llamado "Doable". Dependiendo del estado de autenticación del usuario, renderiza diferentes componentes. Si el usuario está autenticado, muestra el componente Authenticated, que incluye funcionalidades avanzadas para gestionar tareas. Si el usuario no está autenticado, muestra el componente Unauthenticated, que puede proporcionar opciones para iniciar sesión o registrarse. Este componente utiliza el contexto de autenticación (useAuth) para determinar el estado de autenticación del usuario y está estilizado con CSS modules para una apariencia consistente.
+- Asegúrese de que sus versiones de NodeJS y npm estén actualizadas para React ^18.2.0
+
+- Instalar dependencias: npm install or yarn Una pequeña introducción sobre la instalación.
+
+Clone este repositorio
+
+```bash
+  git clone https://github.com/carusi99/ColorGame-and-Doable.git
+```
+
+Ir al directorio del proyecto
+
+```bash
+  cd my-project
+```
+
+Instalar dependencias
+
+```bash
+  npm install
+```
+
+Iniciar el servidor
+
+```bash
+  npm run start
+```
+## 🛠 Skills
+- **JavaScript**: El lenguaje de programación principal utilizado para la lógica del lado del cliente y del servidor.
+- **HTML y CSS**: Utilizados para estilizar la interfaz de usuario.
+
+- **React**: Utilizado para construir la interfaz de usuario interactiva y dinámica de la aplicación.
+- **CSS Modules**: Para mantener los estilos encapsulados y modulares.
+- **API Fetch**: Utilizado para realizar peticiones HTTP a la API del servidor y gestionar las respuestas y errores correspondientes.
+- **npm**: Gestor de paquetes utilizado para instalar y gestionar las dependencias del proyecto.
+
+
+## Paquetes usados:
+
+ - [react (^18.2.0)](https://es.react.dev/)
+ - [react-dom (^18.2.0)](https://www.npmjs.com/package/react-dom)
+ - [vite.js](https://vitejs.dev/)
+
+ - [lucide-react (^0.372.0)](https://lucide.dev/guide/packages/lucide-react)
+
+- [clsx (^2.1.1)](https://www.npmjs.com/package/clsx)
+
+
 
 ## Adicionales
 
@@ -45,3 +96,7 @@ Claro está que en el componente Doable, Color Game y App. también se re-utiliz
 
 ### Testing
 Se implementó pruebas para 2 componentes de React, descubre cuál de ellos!!!
+
+## Contribuciones
+
+cualquier contribución o comentario, me puedes contactar, con gusto te responderé paolapachecocarusi@gmail.com
